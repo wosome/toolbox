@@ -1,5 +1,3 @@
-variable "bucket_name" {}
-
 terraform {
   backend "gcs" {
     bucket  = "${TF_PROJECT_ID}"

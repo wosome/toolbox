@@ -1,1 +1,9 @@
 .idea
+
+.terraform
+service/backend.tf
+
+.auth
+.envs
+
+.env
