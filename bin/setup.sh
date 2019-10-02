@@ -4,7 +4,7 @@ DIR_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 export $(grep -v '^#' "$DIR_ROOT/../.env" | xargs -d '\n')
 
-wk '{
+awk '{
   while (match($0, /\$\{[^\}]+}/)) {
       search = substr($0, RSTART + 2, RLENGTH - 3)
        $0 = substr($0, 1, RSTART - 1)    \
